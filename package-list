@@ -1,0 +1,9 @@
+package-activated-list is a variable defined in `package.el'.
+Its value is
+
+(ggtags auto-complete popup color-theme-sanityinc-tomorrow helm-ag helm helm-core async popup async helm-dash helm helm-core async popup async helm-fl\
+ycheck helm-core async flycheck seq let-alist pkg-info epl dash dash helm-git-grep helm-core async helm-gtags helm helm-core async popup async helm-pr\
+ojectile dash projectile pkg-info epl dash helm helm-core async popup async helm-rtags rtags helm helm-core async popup async helm-swoop helm helm-cor\
+e async popup async helm-themes helm helm-core async popup async leuven-theme magit-find-file dash magit with-editor async magit-popup dash async let-\
+alist git-commit with-editor async dash ghub let-alist dash async magit-popup dash async marmalade furl marmalade-demo org-bullets popup projectile pk\
+g-info epl dash rtags seq try use-package diminish bind-key which-key with-editor async)
