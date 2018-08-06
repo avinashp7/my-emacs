@@ -37,7 +37,6 @@
   :config
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
-(add-to-list 'load-path "/home/avinashp/helm")
 (require 'helm-config)
 
 (require 'helm-flycheck) ;; Not necessary if using ELPA package
