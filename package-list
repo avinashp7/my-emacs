@@ -1,12 +1,39 @@
-;; Install list of package usefull when you want to setup emacs on different machine
+(require 'package)
+(setq package-enable-at-startup nil)
+(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+
+(package-initialize)
+(unless (package-installed-p 'use-package)
+    (package-refresh-contents)
+      (package-install 'use-package))
+
 (setq  package-list
-  '(ggtags auto-complete popup color-theme-sanityinc-tomorrow helm-ag helm helm-core async popup async helm-dash helm helm-core async popup async helm-flycheck helm-core async flycheck seq let-alist pkg-info epl dash dash helm-git-grep helm-core async helm-gtags helm helm-core async popup async helm-projectile dash projectile pkg-info epl dash helm helm-core async popup async helm-rtags rtags helm helm-core async popup async helm-swoop helm helm-core async popup async helm-themes helm helm-core async popup async magit-find-file dash magit with-editor async magit-popup dash async let-alist git-commit with-editor async dash ghub let-alist dash async magit-popup dash async org-bullets popup projectile pkg-info epl dash rtags seq try use-package diminish bind-key which-key with-editor async))
+  '(ggtags auto-complete popup color-theme-sanityinc-tomorrow helm-ag helm helm-core async popup async helm-dash helm helm-core async popup async helm-flycheck helm-core async flycheck seq let-alist pkg-info epl dash dash helm-git-grep helm-core async helm-gtags helm helm-c\
+ore async popup async helm-projectile dash projectile pkg-info epl dash helm helm-core async popup async helm-rtags rtags helm helm-core async popup async helm-swoop helm helm-core async popup async helm-themes helm helm-core async popup async magit-find-file dash magit wit\
+h-editor async magit-popup dash async let-alist git-commit with-editor async dash ghub let-alist dash async magit-popup dash async org-bullets popup projectile pkg-info epl dash rtags seq try use-package diminish bind-key which-key with-editor async))
 
 ; fetch the list of packages available
 (unless package-archive-contents
   (package-refresh-contents))
-
+  
 ; install the missing packages
 (dolist (package package-list)
   (unless (package-installed-p package)
     (package-install package)))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (which-key diminish try org-bullets magit-find-file use-package magit helm-themes helm-swoop helm-rtags helm-projectile helm-gtags he\
+lm-git-grep helm-flycheck helm-dash helm-ag color-theme-sanityinc-tomorrow auto-complete))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )  
+  
